@@ -1,0 +1,17 @@
+# Dependencies
+/node_modules
+.DS_Store
+
+# next.js
+/.next/
+next-env.d.ts
+
+# Production
+/build
+
+# debug
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
