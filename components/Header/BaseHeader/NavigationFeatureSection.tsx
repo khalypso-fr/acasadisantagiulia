@@ -1,34 +1,30 @@
-import { chakra, Box, Link } from "@chakra-ui/react";
+import { Box, Text, Icon, Flex, Heading } from "@chakra-ui/react";
+import Link from "next/link";
 import { FC } from "react";
 import { NavigationFeature } from "../../../config/navigationFeatures";
 
 export const NavigationFeatureSection: FC<NavigationFeature> = ({
   title,
   description,
-  ...props
-}) => {
-  return (
-    <Link m={-3} p={3} display="flex" alignItems="start" rounded="lg">
-      <chakra.svg
-        flexShrink={0}
-        h={6}
-        w={6}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        aria-hidden="true"
-      >
-        <props.icon />
-      </chakra.svg>
-      <Box ml={4}>
-        <chakra.p fontSize="sm" fontWeight="700">
+  icon,
+}) => (
+  <Link href={"#"}>
+    <Box
+      p={3}
+      alignItems="start"
+      rounded={"lg"}
+      bg="white"
+      _hover={{ bg: "brand.50", cursor: "pointer" }}
+    >
+      <Flex direction={"row"} alignItems="center" gap={3}>
+        <Icon flexShrink={1} as={icon} h={5} w={5} color="brand.700" />
+        <Heading flexShrink={1} fontSize={15} color="brand.700">
           {title}
-        </chakra.p>
-        <chakra.p mt={1} fontSize="sm">
-          {description}
-        </chakra.p>
-      </Box>
-    </Link>
-  );
-};
+        </Heading>
+      </Flex>
+      <Text fontSize="sm" mt={3}>
+        {description}
+      </Text>
+    </Box>
+  </Link>
+);

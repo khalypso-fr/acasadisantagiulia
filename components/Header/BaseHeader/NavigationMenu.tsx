@@ -3,6 +3,7 @@ import {
   PopoverTrigger,
   PopoverContent,
   PopoverArrow,
+  PopoverBody,
 } from "@chakra-ui/react";
 import { NavigationMenuButton } from "./NavigationMenuButton";
 import { NavigationMenuContent } from "./NavigationMenuContent";
@@ -14,9 +15,11 @@ export const NavigationMenu = () => (
         <PopoverTrigger>
           <NavigationMenuButton isOpen={isOpen} />
         </PopoverTrigger>
-        <PopoverContent>
+        <PopoverContent minW={{ base: "100%", lg: "max-content" }}>
           <PopoverArrow />
-          <NavigationMenuContent />
+          <PopoverBody>
+            <NavigationMenuContent />
+          </PopoverBody>
         </PopoverContent>
       </>
     )}
