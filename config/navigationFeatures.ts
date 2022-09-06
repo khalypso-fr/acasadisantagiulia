@@ -5,9 +5,13 @@ import {
 } from "react-icons/bs";
 import { IconType } from "react-icons/lib";
 
-type Feature = { icon: IconType; title: string; description: string };
+export type NavigationFeature = {
+  icon: IconType;
+  title: string;
+  description: string;
+};
 
-export const Features: Feature[] = [
+export const headerNavigationFeatures: NavigationFeature[] = [
   {
     icon: BsFillCalendarWeekFill,
     title: "Réserver votre séjour",
