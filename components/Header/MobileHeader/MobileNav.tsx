@@ -1,4 +1,5 @@
 import { useOutsideClick, VStack, CloseButton, Button } from "@chakra-ui/react";
+import Link from "next/link";
 import React, { FC } from "react";
 import { headerNavigationFeatures } from "../../../config/navigationFeatures";
 
@@ -36,6 +37,8 @@ export const MobileNav: FC<{ onClose: () => void }> = ({ onClose }) => {
           colorScheme="brand"
           w="full"
           leftIcon={<feature.icon />}
+          as={Link}
+          href={feature.href}
         >
           {feature.title}
         </Button>

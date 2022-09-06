@@ -7,8 +7,9 @@ export const NavigationFeatureSection: FC<NavigationFeature> = ({
   title,
   description,
   icon,
+  href,
 }) => (
-  <Link href={"#"}>
+  <Link href={href}>
     <Box
       p={3}
       alignItems="start"

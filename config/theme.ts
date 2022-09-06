@@ -10,7 +10,7 @@ export const theme = extendTheme({
         fontWeight: "bold",
       },
       body: {
-        bg: "brand.200",
+        bg: "brand.100",
         color: "black",
       },
     },
