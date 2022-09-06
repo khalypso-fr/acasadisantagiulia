@@ -1,6 +1,6 @@
 import { Button, ButtonProps } from "@chakra-ui/react";
 import Image from "next/image";
-import React, { FC } from "react";
+import React from "react";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 
 export const NavigationMenuButton = React.forwardRef<

@@ -15,6 +15,7 @@ export const NavigationFeatureSection: FC<NavigationFeature> = ({
       rounded={"lg"}
       bg="white"
       _hover={{ bg: "brand.50", cursor: "pointer" }}
+      _active={{ bg: "brand.100" }}
     >
       <Flex direction={"row"} alignItems="center" gap={3}>
         <Icon flexShrink={1} as={icon} h={5} w={5} color="brand.700" />

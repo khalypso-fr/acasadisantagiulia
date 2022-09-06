@@ -1,14 +1,20 @@
-import { useDisclosure, Heading, IconButton, Box } from "@chakra-ui/react";
+import {
+  useDisclosure,
+  Heading,
+  IconButton,
+  Box,
+  BoxProps,
+} from "@chakra-ui/react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { MobileNav } from "./MobileNav";
 import Image from "next/image";
+import { FC, forwardRef } from "react";
 
-export const MobileHeader = () => {
+export const MobileHeader: FC<BoxProps> = (props) => {
   const mobileNav = useDisclosure();
   return (
     <>
       <Box
-        position={"fixed"}
         h={"60px"}
         w={"full"}
         bg={"brand.700"}
@@ -17,13 +23,15 @@ export const MobileHeader = () => {
         display="flex"
         alignItems="center"
         justifyContent="space-between"
+        {...props}
       >
         <Box display={"flex"} alignItems="center" gap={2}>
           <Image src={"/logo.png"} height={"40px"} width={"40x"} />
           <Heading
             fontSize={"md"}
-            color="brand.200"
+            color="white"
             textTransform={"capitalize"}
+            cursor="default"
           >
             A casa di Santa Giulia
           </Heading>
