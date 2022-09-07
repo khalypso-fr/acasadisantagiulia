@@ -37,10 +37,8 @@ export const MobileNav: FC<{ onClose: () => void }> = ({ onClose }) => {
           colorScheme="brand"
           w="full"
           leftIcon={<feature.icon />}
-          as={Link}
-          href={feature.href}
         >
-          {feature.title}
+          <Link href={feature.href}>{feature.title}</Link>
         </Button>
       ))}
     </VStack>
