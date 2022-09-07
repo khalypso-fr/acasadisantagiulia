@@ -6,7 +6,7 @@ import { ExternalActivityLink } from "./ExternalActivityLink";
 
 export const SeaActivities = () => (
   <Feature title="En Mer..." icon={GiAtSea}>
-    <SimpleGrid spacing={2} columns={{ lg: 2 }}>
+    <SimpleGrid spacing={2} columns={{ md: 2 }}>
       {seaPartnerActivities.map((activity, index) => (
         <ExternalActivityLink
           w={"full"}
